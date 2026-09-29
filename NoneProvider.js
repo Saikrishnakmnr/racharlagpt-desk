@@ -1,0 +1,1 @@
+export class NoneProvider{get name(){return'none'}async generate(input){return{ok:true,provider:this.name,text:String(input),reason:'Deterministic fallback'}}async translate(input,source,target){return{ok:false,provider:this.name,text:String(input),reason:`No external translation provider is configured for ${source} → ${target}.`}}}
