@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#070816">
+  <meta name="description" content="RacharlaGPT Desk — a free document, study, writing, translation and creator workspace for students, teachers, professionals and everyone.">
+  <title>RacharlaGPT Desk — Understand. Clean. Translate. Create.</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="aurora aurora-a"></div><div class="aurora aurora-b"></div><div class="aurora aurora-c"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="RacharlaGPT Desk home"><span class="brand-mark">RG</span><span><strong>RacharlaGPT</strong> <em>Desk</em></span></a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#desk">Desk</a><a href="#study">Study</a><a href="#create">Create</a><a href="#ecosystem">Apps</a><a href="#about">About</a>
+    </nav>
+    <button class="ghost-btn" data-scroll="#desk">Open Desk <span>↗</span></button>
+  </header>
+
+  <main id="home">
+    <section class="hero section">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse"></span> Free public workspace • No login • No database</div>
+        <h1>Understand. <span>Clean.</span><br>Translate. <b>Create.</b></h1>
+        <p class="hero-sub">A practical neon workspace for students, teachers, professors, creators, professionals and everyone — built around documents, data, study and everyday work.</p>
+        <div class="hero-actions"><button class="primary-btn" data-scroll="#desk">Start with a file <span>→</span></button><button class="secondary-btn" data-scroll="#ecosystem">Explore RacharlaGPT apps</button></div>
+        <div class="trust-row"><span>⚡ Browser-first tools</span><span>🔒 No account required</span><span>🧩 AI-ready, provider-independent</span></div>
+      </div>
+      <div class="hero-orbit" aria-hidden="true">
+        <div class="orbit-card card-main"><div class="mini-icon">✦</div><strong>RacharlaGPT Desk</strong><small>One workspace. Many jobs.</small><div class="mini-pills"><i>PDF</i><i>Excel</i><i>Notes</i><i>Study</i></div></div>
+        <div class="orbit-card card-one">📄 <span>Understand</span></div><div class="orbit-card card-two">🧹 <span>Clean</span></div><div class="orbit-card card-three">🌐 <span>Translate</span></div><div class="orbit-card card-four">✨ <span>Create</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="desk">
+      <div class="section-heading"><div><span class="section-kicker">THE DESK</span><h2>Pick a job, drop your file.</h2><p>Core tools are designed to work locally whenever practical, so the Desk stays useful even when an optional AI service is unavailable.</p></div><div class="status-chip"><span></span> Core ready</div></div>
+      <div class="drop-zone" id="dropZone" tabindex="0"><div class="drop-glow"></div><div class="upload-icon">⇧</div><h3>Drop a document here</h3><p>TXT, CSV, MD and common document files can be inspected locally. Choose a tool below for the right workflow.</p><input id="fileInput" type="file" hidden multiple><button class="primary-btn" id="chooseFile">Choose files</button><div id="fileList" class="file-list"></div></div>
+
+      <div class="tool-grid">
+        <article class="tool-card" data-tool="csv"><div class="tool-icon cyan">▦</div><span class="tag">DATA</span><h3>Excel / CSV Cleaner</h3><p>Trim messy cells, remove blank rows, remove duplicate rows and export a clean CSV.</p><button class="card-btn" data-open-tool="csv">Open cleaner →</button></article>
+        <article class="tool-card" data-tool="bill"><div class="tool-icon pink">₹</div><span class="tag">DOCUMENTS</span><h3>Bill & Invoice Reader</h3><p>Extract visible invoice fields and totals, then highlight items worth verifying.</p><button class="card-btn" data-open-tool="bill">Analyze a bill →</button></article>
+        <article class="tool-card" data-tool="notes"><div class="tool-icon violet">✦</div><span class="tag">UNDERSTAND</span><h3>Notes & PDF Explainer</h3><p>Turn pasted notes or extracted text into a clean outline, key points and study prompts.</p><button class="card-btn" data-open-tool="notes">Explain notes →</button></article>
+        <article class="tool-card" data-tool="correct"><div class="tool-icon green">✓</div><span class="tag">WRITING</span><h3>English Corrector</h3><p>Clean common spacing, punctuation and capitalization issues without changing your meaning.</p><button class="card-btn" data-open-tool="correct">Correct text →</button></article>
+        <article class="tool-card" data-tool="translate"><div class="tool-icon orange">文</div><span class="tag">LANGUAGES</span><h3>Language Workspace</h3><p>Prepare text for translation and export-ready documents, with optional AI providers kept replaceable.</p><button class="card-btn" data-open-tool="translate">Open translator →</button></article>
+        <article class="tool-card" data-tool="ppt"><div class="tool-icon blue">▤</div><span class="tag">CREATE</span><h3>PPT Builder</h3><p>Build a polished presentation outline from a topic, with deterministic slide structure ready for export.</p><button class="card-btn" data-open-tool="ppt">Make a PPT plan →</button></article>
+        <article class="tool-card" data-tool="social"><div class="tool-icon red">@</div><span class="tag">PUBLISH</span><h3>Post & Message Studio</h3><p>Create structured drafts for LinkedIn, Instagram, WhatsApp, YouTube and college announcements.</p><button class="card-btn" data-open-tool="social">Create a post →</button></article>
+        <article class="tool-card" data-tool="image"><div class="tool-icon yellow">◈</div><span class="tag">CREATOR</span><h3>Image Prep</h3><p>Resize and prepare simple profile, thumbnail and social image jobs without leaving the Desk.</p><button class="card-btn" data-open-tool="image">Open image tools →</button></article>
+        <article class="tool-card" data-tool="pdf"><div class="tool-icon blue">PDF</div><span class="tag">DOCUMENTS</span><h3>PDF Creator</h3><p>Create a real PDF locally from notes, reports, bills or copied document text.</p><button class="card-btn" data-open-tool="pdf">Create PDF →</button></article>
+        <article class="tool-card" data-tool="calc"><div class="tool-icon green">＋</div><span class="tag">UTILITY</span><h3>Calculator</h3><p>Safe arithmetic for totals, percentages and engineering-style calculations without eval.</p><button class="card-btn" data-open-tool="calc">Open calculator →</button></article>
+      </div>
+    </section>
+
+    <section class="section split-section" id="study">
+      <div class="feature-panel study-panel"><span class="section-kicker">FOR STUDENTS & TEACHERS</span><h2>From raw notes to useful study material.</h2><p>Designed for engineering students, school and college students, teachers, professors and self-learners.</p><div class="mode-grid"><button data-template="student">🎓 Student Mode<small>summary • quiz • revision</small></button><button data-template="teacher">🧑‍🏫 Teacher Mode<small>lesson • handout • questions</small></button><button data-template="engineering">⚙ Engineering Mode<small>concept • formula • viva</small></button><button data-template="everyone">🌍 Everyone Mode<small>simple explanation • action list</small></button></div></div>
+      <div class="feature-panel safety-panel"><span class="section-kicker">DOCUMENT AWARENESS</span><h2>Explain first. Verify important details.</h2><p>For hospital bills and sensitive documents, the Desk separates extracted facts from interpretation and avoids presenting uncertain text as fact.</p><ul class="check-list"><li>Structured fields and arithmetic checks</li><li>“Items to Verify” instead of accusations</li><li>Unclear OCR stays marked as uncertain</li><li>Original-document verification reminder</li></ul><div class="notice">AI-generated explanations can contain mistakes. They are for understanding and awareness only, not proof for a dispute or a substitute for professional advice.</div></div>
+    </section>
+
+    <section class="section" id="create">
+      <div class="section-heading"><div><span class="section-kicker">CREATE</span><h2>One idea. Many useful outputs.</h2><p>Use the same source text to prepare study material, messages, posts, outlines and practical documents.</p></div></div>
+      <div class="creator-strip"><button data-template="linkedin">LinkedIn post</button><button data-template="instagram">Instagram caption</button><button data-template="whatsapp">WhatsApp message</button><button data-template="youtube">YouTube description</button><button data-template="quiz">Quiz / MCQs</button><button data-template="assignment">Assignment outline</button></div>
+      <div class="workspace-card"><div class="workspace-top"><span>Quick creator</span><button id="copyOutput" class="ghost-btn">Copy output</button></div><textarea id="creatorInput" placeholder="Enter a topic, notes, announcement or rough message..."></textarea><div class="workspace-actions"><select id="creatorType"><option value="summary">Simple summary</option><option value="linkedin">LinkedIn post</option><option value="instagram">Instagram caption</option><option value="whatsapp">WhatsApp message</option><option value="quiz">Quiz / MCQs</option><option value="assignment">Assignment outline</option></select><button id="generateDraft" class="primary-btn">Generate locally →</button></div><pre id="creatorOutput" class="output-box">Your structured draft will appear here.</pre></div>
+    </section>
+
+    <section class="section ecosystem" id="ecosystem">
+      <div class="section-heading"><div><span class="section-kicker">RACHARLAGPT ECOSYSTEM</span><h2>More free tools from RacharlaGPT.</h2><p>Keep the Desk focused, while your other public services stay one click away.</p></div></div>
+      <div class="ecosystem-grid">
+        <a class="eco-card eco-main" href="https://RacharlaGPT.in" target="_blank" rel="noopener"><span class="eco-badge">FREE</span><div class="eco-logo">RG</div><h3>RacharlaGPT.in</h3><p>AI programming, learning, coding, debugging, ATS resume builder and score checker.</p><span>Open service ↗</span></a>
+        <a class="eco-card" href="https://Spin.RacharlaGPT.in" target="_blank" rel="noopener"><span class="eco-badge">FREE FUN</span><div class="eco-logo">SP</div><h3>Spin.RacharlaGPT.in</h3><p>Dice roll, reaction, memory game, Ludo-style play, trivia quiz, toss and more.</p><span>Play free ↗</span></a>
+        <a class="eco-card" href="https://trend.racharlagpt.in" target="_blank" rel="noopener"><span class="eco-badge">FREE CREATOR</span><div class="eco-logo">TR</div><h3>trend.racharlagpt.in</h3><p>Image utilities, conversions, thumbnails, WhatsApp DP and creator-ready makers.</p><span>Create ↗</span></a>
+        <a class="eco-card paid" href="https://songs.racharlagpt.in" target="_blank" rel="noopener"><span class="eco-badge">CUSTOM ORDERS</span><div class="eco-logo">♪</div><h3>songs.racharlagpt.in</h3><p>Custom songs for birthdays, parties, events and personalised named-song orders.</p><span>Order a song ↗</span></a>
+      </div>
+    </section>
+
+    <section class="section faq-section">
+      <div class="section-heading"><div><span class="section-kicker">BUILT FOR REAL USE</span><h2>Simple rules, clear expectations.</h2></div></div>
+      <div class="faq-grid"><details open><summary>Do I need an account?</summary><p>No. The first version is designed without login, registration or a user database.</p></details><details><summary>Are my uploaded files stored?</summary><p>The Desk is designed around browser-first processing for supported operations. It does not create a user history database. Sensitive workflows should still tell users exactly when a network service is required.</p></details><details><summary>Does every feature require AI?</summary><p>No. Cleaning, formatting, extraction checks and presentation structure can be deterministic. Optional AI can improve language-heavy tasks without becoming the single point of failure.</p></details><details><summary>Is the hospital-bill result official?</summary><p>No. It is an AI-assisted/document-processing aid for understanding and verification. Users should compare important information with the original document and seek professional advice when appropriate.</p></details></div>
+    </section>
+
+    <section class="section legal-grid" id="privacy">
+      <div class="feature-panel"><span class="section-kicker">PRIVACY</span><h2>Privacy by design.</h2><p>RacharlaGPT Desk is designed without user accounts, profiles or a database in this first version. Supported browser-first tools process files locally in the browser. If a future feature needs a network service, the interface should clearly tell the user before sending data.</p><p class="muted">Do not upload sensitive documents to any online service unless you understand where the data goes and why it is needed.</p></div>
+      <div class="feature-panel" id="terms"><span class="section-kicker">TERMS</span><h2>Use the Desk responsibly.</h2><p>The Desk provides utilities and generated drafts for convenience. You are responsible for reviewing outputs, checking important facts, respecting copyrights and using generated content appropriately.</p><p class="muted">Features, limits and external services may change as the product evolves.</p></div>
+      <div class="feature-panel" id="disclaimer"><span class="section-kicker">DISCLAIMER</span><h2>Important information.</h2><p>AI-generated or automated results may contain mistakes. They are provided for general understanding and awareness and are not medical, legal, financial or professional advice. They are not official documents or proof of a claim or dispute. Verify important information against the original source and consult a qualified professional when appropriate.</p></div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="about-card"><div class="about-logo">RG<span>+</span></div><div><span class="section-kicker">ABOUT</span><h2>RacharlaGPT Desk</h2><p>Created and developed by <strong>Racharla Saikrishna</strong>. The Desk is intended as a practical public workspace for students, teachers, professors, professionals, creators and everyday users.</p><p class="muted">Understand. Clean. Translate. Create.</p></div></div>
+      <div class="contact-grid"><div><span class="section-kicker">CONTACT</span><h3>Need help or want to suggest a feature?</h3><a class="contact-link" href="mailto:racharlagpt@gmail.com">racharlagpt@gmail.com</a></div><div><span class="section-kicker">YOUTUBE</span><h3>Watch RacharlaGPT updates</h3><a class="contact-link" href="https://youtube.com/@racharlagpt" target="_blank" rel="noopener">youtube.com/@racharlagpt ↗</a></div></div>
+    </section>
+  </main>
+
+  <footer class="footer"><div><strong>RacharlaGPT Desk</strong><span>© <span id="year"></span> RacharlaGPT</span></div><div><a href="#about">About</a><a href="mailto:racharlagpt@gmail.com">Contact</a><a href="#privacy">Privacy</a><a href="#terms">Terms</a><a href="#disclaimer">Disclaimer</a></div></footer>
+
+  <dialog id="toolDialog" class="tool-dialog"><div class="dialog-head"><div><span id="dialogKicker" class="section-kicker">TOOL</span><h2 id="dialogTitle">Desk tool</h2></div><button id="closeDialog" class="icon-btn" aria-label="Close">×</button></div><div id="dialogBody"></div></dialog>
+  <div id="toast" class="toast" role="status"></div>
+  <script type="module">import { DeskCore } from "./core/EngineRegistry.js"; window.RacharlaGPTDeskCore = DeskCore;</script>
+  <script src="app.js"></script>
+</body>
+</html>
