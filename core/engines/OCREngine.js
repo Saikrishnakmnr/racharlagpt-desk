@@ -1,0 +1,1 @@
+export const OCREngine={name:'OCR Engine',async extractText(){if('TextDetector' in window){try{return {ok:true,text:'',provider:'browser'}}catch(e){return {ok:false,text:'',reason:e.message}}}return {ok:false,text:'',reason:'No native OCR capability is exposed by this browser. The Desk will not guess unreadable text.'}}};
